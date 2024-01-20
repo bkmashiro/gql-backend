@@ -18,7 +18,10 @@ export class UserService {
   }
 
   create(createUserInput: CreateUserInput) {
-    return 'This action adds a new user';
+    const id = this.userMap.size + 1;
+    const user = { ...createUserInput, id, name: createUserInput.username, submissions: [] };
+    this.userMap.set(id, user);
+    return user;
   }
 
   findAll() {
