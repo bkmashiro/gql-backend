@@ -18,7 +18,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "gen-operation": "ts-node operation-gen.ts"
+    "codegen": "ts-node operation-gen.ts"
   },
   "dependencies": {
     "@apollo/client": "^3.8.10",

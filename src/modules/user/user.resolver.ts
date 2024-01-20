@@ -27,9 +27,9 @@ export class UserResolver {
     return this.userService.findOne(id);
   }
 
-  @ResolveField()
   // this function is called when the field `submissions` is requested
   // function name must be the same as the field name
+  @ResolveField()
   submissions(@Parent() user: User) { 
     const { id } = user;  
     console.log('id', id);
