@@ -20,6 +20,6 @@ export class Submission {
   @Field(() => String, { description: 'updatedAt' })
   updatedAt: string;
 
-  @Field(() => String, { description: 'deletedAt' })
+  @Field(() => String, { description: 'deletedAt', nullable: true })
   deletedAt: string;
 }

@@ -1,0 +1,105 @@
+query user($id: Int!) {
+  user(id: $id) {
+    id
+    name
+    email
+    password
+    submissions {
+      id
+      title
+      content
+      userId
+      createdAt
+      updatedAt
+      deletedAt
+    }
+  }
+}query submission($id: Int!) {
+  submission(id: $id) {
+    id
+    title
+    content
+    userId
+    createdAt
+    updatedAt
+    deletedAt
+  }
+}mutation createUser($createUserInput: CreateUserInput!) {
+  createUser(createUserInput: $createUserInput) {
+    id
+    name
+    email
+    password
+    submissions {
+      id
+      title
+      content
+      userId
+      createdAt
+      updatedAt
+      deletedAt
+    }
+  }
+}mutation updateUser($updateUserInput: UpdateUserInput!) {
+  updateUser(updateUserInput: $updateUserInput) {
+    id
+    name
+    email
+    password
+    submissions {
+      id
+      title
+      content
+      userId
+      createdAt
+      updatedAt
+      deletedAt
+    }
+  }
+}mutation removeUser($id: Int!) {
+  removeUser(id: $id) {
+    id
+    name
+    email
+    password
+    submissions {
+      id
+      title
+      content
+      userId
+      createdAt
+      updatedAt
+      deletedAt
+    }
+  }
+}mutation createSubmission($createSubmissionInput: CreateSubmissionInput!) {
+  createSubmission(createSubmissionInput: $createSubmissionInput) {
+    id
+    title
+    content
+    userId
+    createdAt
+    updatedAt
+    deletedAt
+  }
+}mutation updateSubmission($updateSubmissionInput: UpdateSubmissionInput!) {
+  updateSubmission(updateSubmissionInput: $updateSubmissionInput) {
+    id
+    title
+    content
+    userId
+    createdAt
+    updatedAt
+    deletedAt
+  }
+}mutation removeSubmission($id: Int!) {
+  removeSubmission(id: $id) {
+    id
+    title
+    content
+    userId
+    createdAt
+    updatedAt
+    deletedAt
+  }
+}

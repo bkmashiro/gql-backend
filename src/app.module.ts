@@ -13,7 +13,6 @@ import { SubmissionModule } from './modules/submission/submission.module';
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       playground: true,
-      
     }),
     UserModule,
     SubmissionModule,
