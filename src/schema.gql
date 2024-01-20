@@ -1,0 +1,79 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Submission {
+  """id"""
+  id: Int!
+
+  """title"""
+  title: String!
+
+  """content"""
+  content: String!
+
+  """userId"""
+  userId: Int!
+
+  """createdAt"""
+  createdAt: String!
+
+  """updatedAt"""
+  updatedAt: String!
+
+  """deletedAt"""
+  deletedAt: String!
+}
+
+type User {
+  """id"""
+  id: Int!
+
+  """name"""
+  name: String!
+
+  """email"""
+  email: String!
+
+  """password"""
+  password: String!
+
+  """submission"""
+  submissions: [Submission]!
+}
+
+type Query {
+  user(id: Int!): User!
+  submission(id: Int!): Submission!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser(id: Int!): User!
+  createSubmission(createSubmissionInput: CreateSubmissionInput!): Submission!
+  updateSubmission(updateSubmissionInput: UpdateSubmissionInput!): Submission!
+  removeSubmission(id: Int!): Submission!
+}
+
+input CreateUserInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateUserInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateSubmissionInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateSubmissionInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
